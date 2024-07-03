@@ -13,7 +13,7 @@ Route::get('/home', function () {
 Route::get('/home',[HomeController::class, 'index'])->name('home');
 Route::get('/aboutus',[HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/test/{id}/{name}',[HomeController::class, 'test'])->name('test');
-
+Route::get('/admin',[App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
